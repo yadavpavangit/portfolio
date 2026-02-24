@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import project from "../constance/someData.json";
+import { motion } from "motion/react";
 
 function About() {
   return (
@@ -30,7 +31,7 @@ function About() {
               />
             </div>
 
-            <div className="absolute -bottom-6 -right-6 bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold shadow-lg">
+            <div className="absolute -bottom-6 right-6 bg-yellow-500 text-black px-6 py-3 rounded-xl font-bold shadow-lg">
               Fresher
             </div>
           </div>
@@ -105,8 +106,13 @@ function About() {
 
           <div className="grid md:grid-cols-3 gap-10">
             {project.map((item, ind) => (
-              <div
+              <motion.div
                 key={ind}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: ind * 0.2 }}
+                whileHover={{ scale: 1.03 }}
                 className="bg-gray-800/50 backdrop-blur-md rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400 hover:-translate-y-2 transition-all duration-300 shadow-xl"
               >
                 <video
@@ -134,9 +140,15 @@ function About() {
                   <div className="modal-box">
                     <h3 className="font-bold text-lg">{item.title}</h3>
                     <p className="py-4">{item.description}</p>
+                    <NavLink
+                      to={item.webUrl}
+                      target="_blank"
+                      className="btn text-yellow-400 hover:underline"
+                    >
+                      Visit Website
+                    </NavLink>
                     <div className="modal-action">
                       <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
                         <button className="btn px-6 py-2 bg-yellow-500 text-black rounded-lg font-semibold hover:bg-yellow-500/80 transition-all duration-300">
                           Close
                         </button>
@@ -144,7 +156,7 @@ function About() {
                     </div>
                   </div>
                 </dialog>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

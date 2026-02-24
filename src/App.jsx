@@ -11,9 +11,12 @@ function App() {
 
   return (
     <>
-      <div className="fixed bottom-20 right-10 z-99 w-6 h-6 rounded-full p-3 bg-yellow-400 text-yellow-300 text-xs font-bold flex items-center justify-center cursor-pointer animate-bounce">
-        <button onClick={scrollToTop}>
-          <FaArrowUp color="black" size={18} />
+      <div
+        onClick={scrollToTop}
+        className="fixed bottom-20 right-10 z-99 w-6 h-6 rounded-full p-6 bg-yellow-400 text-yellow-300 text-xs font-bold flex items-center justify-center cursor-pointer animate-bounce"
+      >
+        <button>
+          <FaArrowUp color="black" size={28} />
         </button>
       </div>
       <Header />

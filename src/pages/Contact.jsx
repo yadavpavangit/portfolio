@@ -60,7 +60,8 @@ function Contact() {
 
           <div className="space-y-3 text-gray-400">
             <p className="flex items-center gap-2">
-              <FaLocationDot color="red" /> Ahmedabad, Gujarat
+              <FaLocationDot color="red" />
+              Odhav, Ahmedabad, Gujarat
             </p>
             <p className="flex items-center gap-2">
               <MdMail color="white" /> yadavp07.07@gmail.com

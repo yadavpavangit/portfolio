@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <section className="relative w-full min-h-screen flex items-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-20 overflow-hidden">
         {/* Background Glow */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"></div>
