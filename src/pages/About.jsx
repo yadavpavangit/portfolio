@@ -65,7 +65,7 @@ function About() {
                   "Tailwind CSS",
                   "HTML5",
                   "CSS3",
-                  "Python",
+                  "jQuey",
                 ].map((skill, index) => (
                   <div
                     key={index}
