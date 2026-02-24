@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Home() {
   return (
     <>
@@ -28,11 +30,11 @@ function Home() {
                 onClick={() => window.open("/PavanResume.pdf", "_blank")}
                 className="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-yellow-400/40 transition-all duration-300"
               >
-                Download Resume
+                Resume
               </button>
 
               <button className="px-8 py-3 border border-yellow-400 text-yellow-400 rounded-xl hover:bg-yellow-400 hover:text-black transition-all duration-300">
-                Contact Me
+                <NavLink to="/contact">Contact Me</NavLink>
               </button>
             </div>
           </div>
@@ -94,9 +96,11 @@ function HomeAbout() {
 
         {/* CTA */}
         <div className="mt-16 text-center">
-          <button className="px-10 py-4 bg-yellow-400 text-black font-bold rounded-xl hover:scale-105 transition-transform duration-300 shadow-lg">
-            Let's Work Together
-          </button>
+          <NavLink to={"/contact"}>
+            <button className="px-10 py-4 bg-yellow-400 text-black font-bold rounded-xl hover:scale-105 transition-transform duration-300 shadow-lg">
+              Let's Work Together
+            </button>
+          </NavLink>
         </div>
       </div>
     </section>
