@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Dog Studio",
+    "description": "Project made by using GSAP, Three.js, React.js",
+    "video": "/videos/project.mp4"
+  },
+  {
+    "id": 2,
+    "title": "Salad Restaurant",
+    "description": "React shopping website",
+    "video": "/videos/project1.mp4"
+  }
+]
