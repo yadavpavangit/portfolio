@@ -1,7 +1,7 @@
 function Home() {
   return (
     <>
-      <section className="relative w-full min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden">
         
         {/* Background Glow */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-500/20 rounded-full blur-3xl"></div>
@@ -60,7 +60,7 @@ function Home() {
 
 function HomeAbout() {
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-800 to-gray-900 text-white">
+    <section className="py-24 bg-linear-to-br from-gray-800 to-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="text-center space-y-6 mb-16">

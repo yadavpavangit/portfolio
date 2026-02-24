@@ -3,7 +3,7 @@ import project from "../constance/someData.json";
 
 function About() {
   return (
-    <section className="relative w-full bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white py-24 overflow-hidden">
+    <section className="relative w-full bg-linear-to-br from-gray-900 via-black to-gray-900 text-white py-24 overflow-hidden">
       {/* Background Glow Effects */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-500/10 blur-3xl rounded-full"></div>
       <div className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -22,7 +22,7 @@ function About() {
         <div className="grid md:grid-cols-2 gap-20 items-center">
           {/* LEFT SIDE - IMAGE */}
           <div className="relative flex justify-center">
-            <div className="relative w-[350px] h-[350px] rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl shadow-yellow-500/10">
+            <div className="relative w-87.5 h-87.5 rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl shadow-yellow-500/10">
               <img
                 src="/images/about_img.png"
                 alt="Profile"
