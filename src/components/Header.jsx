@@ -17,8 +17,8 @@ function Header() {
   }, []);
   return (
     <header
-      className={`w-full fixed top-0 z-40 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? "bg-[#557372]/20 shadow-lg" : "bg-[#344be1]"
+      className={`w-full sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${
+        isScrolled ? "bg-[#557372]/20 shadow-lg" : "bg-gray-900"
       }`}
     >
       <nav className="flex justify-between px-3 md:px-10 lg:px-20 py-5">
