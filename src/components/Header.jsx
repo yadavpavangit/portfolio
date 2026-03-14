@@ -25,12 +25,12 @@ function Header() {
       }`}
     >
       <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 lg:px-20 py-5">
-        {/* Logo */}
+        {/* LOGO */}
         <h2 className="text-2xl font-bold text-white tracking-wide">
           Pavan <span className="text-yellow-400">Dev.</span>
         </h2>
 
-        {/* Desktop Nav */}
+        {/* DESKTOP NAV */}
         <div className="hidden sm:flex items-center gap-8 text-white font-medium">
           <NavLink
             to="/"
@@ -66,7 +66,7 @@ function Header() {
           </NavLink>
         </div>
 
-        {/* Mobile Icon */}
+        {/* MOBILE ICONS */}
         <div className="sm:hidden text-white text-2xl cursor-pointer z-50">
           {menuIsOpen ? (
             <RxCross1 onClick={() => setMenuIsOpen(false)} />
@@ -76,7 +76,6 @@ function Header() {
         </div>
       </nav>
 
-      {/* Mobile Backdrop */}
       {menuIsOpen && (
         <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm sm:hidden"
@@ -84,7 +83,7 @@ function Header() {
         />
       )}
 
-      {/* Mobile Menu (Slide from Right) */}
+      {/* MOBILE MENU */}
       <div
         className={`fixed top-0 right-0 h-screen w-64 bg-gray-900 shadow-2xl transform transition-transform duration-500 sm:hidden ${
           menuIsOpen ? "translate-x-0" : "translate-x-full"
