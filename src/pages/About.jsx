@@ -20,10 +20,10 @@ function About() {
           <div className="w-24 h-1 bg-yellow-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-20 items-center">
+        <div className="grid md:grid-cols-2 gap-20 items-center px-4">
           {/* LEFT SIDE - IMAGE */}
           <div className="relative flex justify-center">
-            <div className="relative w-[350px] h-[350px] rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl shadow-yellow-500/10">
+            <div className="w-full max-w-[350px] aspect-square rounded-3xl overflow-hidden border border-yellow-500/30 shadow-2xl shadow-yellow-500/10 mx-auto">
               <img
                 src="/images/about_img.png"
                 alt="Profile"
