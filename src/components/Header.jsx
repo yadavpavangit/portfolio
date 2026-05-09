@@ -9,77 +9,100 @@ function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinkStyle =
+    "relative hover:text-yellow-400 transition-colors duration-300";
+
   return (
     <header
-      className={`w-full fixed top-0 z-40 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? "bg-[#557372]/20 shadow-lg" : "bg-[#344be1]"
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-black/70 backdrop-blur-xl shadow-lg" : "bg-transparent"
       }`}
     >
-      <nav className="flex justify-between px-3 md:px-10 lg:px-20 py-5">
-        <h2
-          className={`text-xl font-semibold transition-colors duration-300 ${
-            isScrolled ? "text-[#F3EFEA]" : "text-white/80"
-          }`}
-        >
-          Pavan <span className="text-lg font-medium">Dev.</span>
+      <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 lg:px-20 py-5">
+        {/* LOGO */}
+        <h2 className="text-2xl font-bold text-white tracking-wide">
+          Pavan <span className="text-yellow-400">Dev.</span>
         </h2>
-        <div
-          className={`hidden sm:flex items-center gap-5 text-xl font-semibold transition-colors duration-300 ${
-            isScrolled ? "text-[#F3EFEA]" : "text-white/80"
-          }`}
-        >
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/projects">projects</NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
+
+        {/* DESKTOP NAV */}
+        <div className="hidden sm:flex items-center gap-8 text-white font-medium">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `${navLinkStyle} ${isActive ? "text-yellow-400" : ""}`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `${navLinkStyle} ${isActive ? "text-yellow-400" : ""}`
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) =>
+              `${navLinkStyle} ${isActive ? "text-yellow-400" : ""}`
+            }
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `${navLinkStyle} ${isActive ? "text-yellow-400" : ""}`
+            }
+          >
+            Contact
+          </NavLink>
         </div>
-        {menuIsOpen ? (
-          <RxCross1
-            className={`block sm:hidden transition-colors duration-300 ${
-              isScrolled ? "text-[#F3EFEA]" : "text-white/80"
-            }`}
-            onClick={() => setMenuIsOpen(!menuIsOpen)}
-          />
-        ) : (
-          <CiMenuFries
-            className={`block sm:hidden transition-colors duration-300 ${
-              isScrolled ? "text-[#F3EFEA]" : "text-white/80"
-            }`}
-            onClick={() => setMenuIsOpen(!menuIsOpen)}
-          />
-        )}
+
+        {/* MOBILE ICONS */}
+        <div className="sm:hidden text-white text-2xl cursor-pointer z-50">
+          {menuIsOpen ? (
+            <RxCross1 onClick={() => setMenuIsOpen(false)} />
+          ) : (
+            <CiMenuFries onClick={() => setMenuIsOpen(true)} />
+          )}
+        </div>
       </nav>
-      {/* MOBILE NAVBAR BACKDROP */}
+
       {menuIsOpen && (
         <div
-          className="fixed inset-0 backdrop-blur-sm z-40 sm:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm sm:hidden"
           onClick={() => setMenuIsOpen(false)}
         />
       )}
-      {/* MOBILE NAVBAR */}
+
+      {/* MOBILE MENU */}
       <div
-        className={`flex flex-col w-full h-109 justify-center bg-blue-400/90 sm:hidden fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-5 transition-all duration-500 z-50 text-xl font-semibold ${menuIsOpen ? "opacity-100 top-70" : "translate-x-full opacity-0 pointer-events-none"} ${
-          isScrolled ? "text-[#F3EFEA]" : "text-white/80"
+        className={`fixed top-0 right-0 h-screen w-64 bg-gray-900 shadow-2xl transform transition-transform duration-500 sm:hidden ${
+          menuIsOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <NavLink to="/" onClick={() => setMenuIsOpen(false)}>
-          Home
-        </NavLink>
-        <NavLink to="/about" onClick={() => setMenuIsOpen(false)}>
-          About
-        </NavLink>
-        <NavLink to="/projects" onClick={() => setMenuIsOpen(false)}>
-          projects
-        </NavLink>
-        <NavLink to="/contact" onClick={() => setMenuIsOpen(false)}>
-          Contact Us
-        </NavLink>
+        <div className="flex flex-col mt-24 items-center gap-8 text-white text-lg font-medium">
+          <NavLink to="/" onClick={() => setMenuIsOpen(false)}>
+            Home
+          </NavLink>
+          <NavLink to="/about" onClick={() => setMenuIsOpen(false)}>
+            About
+          </NavLink>
+          <NavLink to="/projects" onClick={() => setMenuIsOpen(false)}>
+            Projects
+          </NavLink>
+          <NavLink to="/contact" onClick={() => setMenuIsOpen(false)}>
+            Contact
+          </NavLink>
+        </div>
       </div>
     </header>
   );

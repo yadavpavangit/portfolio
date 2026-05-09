@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Dog Studio",
+    "description": "Built a creative animated website using GSAP for smooth and high-performance animations.Implemented scroll-triggered effects and timeline-based transitions for better motion control.Designed an interactive and visually engaging user experience inspired by modern agency websites.Focused on responsive layout and smooth performance across different devices.Enhanced front-end development skills by applying advanced animation techniques and clean UI design.",
+    "video": "/videos/project.mp4",
+    "webUrl": "https://dogstudio-gsap.netlify.app/"
+  },
+  {
+    "id": 2,
+    "title": "Salad Restaurant",
+    "description": "This project is a modern and responsive restaurant website designed to showcase fresh and healthy salad dishes. It features a clean layout with attractive food sections and easy navigation. The design focuses on user experience, making it simple to explore the menu and offerings. The website is fully responsive and works smoothly across devices. Overall, it highlights my ability to create visually appealing and user-friendly food business websites.",
+    "video": "/videos/project1.mp4",
+    "webUrl": "https://saladrestaurant.netlify.app/"
+  },
+  {
+    "id": 3,
+    "title": "Redux-E-commerce-Store",
+    "description": "Built a responsive e-commerce product interface using React.js, Redux Toolkit, and Tailwind CSS, integrating product data from an external API. Implemented dynamic category filtering, cart management, and product detail navigation with efficient global state management using Redux, providing a smooth and interactive shopping experience.",
+    "video": "/videos/project2.mp4",
+    "webUrl": "https://reducxstore.netlify.app/"
+  }
+]
